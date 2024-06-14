@@ -30,8 +30,8 @@ public class MainActivityTest {
     public void mainActivityTest() {
         ViewInteraction textView = onView(
                 allOf(withId(R.id.text_home), withText("This is home fragment"),
-                        withParent(withParent(withId(R.id.nav_host_fragment_content_main))),
-                        isDisplayed()));
+                        withParent(withParent(withId(R.id.nav_host_fragment_content_main)))));
+        textView.check(matches(isDisplayed()));
         textView.check(matches(withText("This is home fragment")));
     }
 }
